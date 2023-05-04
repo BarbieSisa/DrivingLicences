@@ -9,11 +9,11 @@ namespace BusinessLayer
 {
     public class User
     {
+        public int Id { get; set; }
 
-
-        [Required]
-        [Key]
-        public int ID { get; set; }
+        [MaxLength(9)]
+       
+        public int IDcardNumber { get; set; } // 1 FK
 
         [Required]
         [Range(3, 20, ErrorMessage = "First name must be between 3 and 20 characters.")]
@@ -27,15 +27,12 @@ namespace BusinessLayer
         [Range(3, 20, ErrorMessage = "Last name must be between 3 and 20 characters.")]
         public string Lname { get; set; }
 
-        [Required]
+      
         [StringLength(10, ErrorMessage ="EGN must be 10 symbols.")]
         public int EGN { get; set; }
 
         [Required]
-        [StringLength(9, ErrorMessage ="ID card muber must be 9 symbols.")]
-        public int IDcardNumber { get; set; } // 1 FK
-
-        [Required]
+   
         public DateTime Birthdate { get; set; }
         
         [Required]

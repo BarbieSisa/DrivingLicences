@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    internal class Location
+    public enum Location
     {
+        Sofia,
+        Plovdiv,
+        Varna,
+        Burgas,
+        Ruse,
+        Vidin,
+        Pazardzik,
+        Pleven
     }
 }

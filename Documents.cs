@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,9 @@ namespace BusinessLayer
     public class Documents
     {
         [Key]
+        public int ID { get; set; }
+        [ForeignKey("IdCart")]
+        
         public int IDCard { get; set; }
         [Required]
         public bool MedicalDocument { get; set; }
